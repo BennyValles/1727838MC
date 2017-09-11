@@ -1,0 +1,19 @@
+cnt=0
+def orden_por_insercion(array):
+  global cnt
+  for indice in range (1,len(array)):
+    valor=array[indice]
+    i=indice-1
+    while i>0:
+      cnt+=indice-1
+      if valor<array[i]:
+        array[i+1]=array[i]
+        array[i]=valor
+        i-=indice-1
+      else:
+          break
+  return array      
+
+array=[26,2,45,30,1,450,1]
+print orden_por_insercion(array)
+cnt
