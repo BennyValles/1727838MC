@@ -1,0 +1,22 @@
+contador=0
+
+def quicksort(arr):
+     global contador
+     if arr==[]:
+         return arr
+     izq,der,m=[],[],arr[0]
+     for k in arr[1:]:
+         contador+=1
+         if k<m:
+             izq.append(k)
+         else:
+             der.append(k)
+     return quicksort(izq)+[m]+quicksort(der)
+
+import random
+
+arr= random.sample(range(0,1000) ,10)
+print(arr)
+arrs=quicksort(arr)
+print(contador)
+print(arrs)
