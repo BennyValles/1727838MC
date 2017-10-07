@@ -1,0 +1,27 @@
+#Código de pila visto en clase 
+class pila:
+    def __init__(self):
+        self.pila=[]
+    def obtr(self):
+        return self.pila.pop()
+    def meter(self,e):
+        self.pila.append(e)
+        return len(self.pila)
+    @property
+    def lon(self):
+        return len(self.pila)
+
+
+p=pila()
+p.meter(1)
+p.meter(2)
+p.meter('a')
+p.meter("b")
+print(p.lon)
+print(p.obtr())
+print(p.obtr())
+print(p.obtr())
+print(p.obtr())
+print(p.lon)
+
+#6/oct/2017
