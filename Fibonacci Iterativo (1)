@@ -1,0 +1,11 @@
+def fibo(n): #Definición de variable
+	global cnt #Contador
+	if n==0 or n==1: #Condicional para los primeros dos términos
+		return(1) #Valor de los primeros térimon
+	r, r1, r2 = 0, 1, 2 # Definición de variables
+	for i in range (2,n): #Ciclo para repetir el proceso hasta llegar a la posición deseada
+		cnt+=1
+		r=r1+r2
+		r2=r1
+		r1=r
+	return (r)
