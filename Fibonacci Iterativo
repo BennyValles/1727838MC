@@ -1,0 +1,8 @@
+cnt=0
+def fibonacci(n): #Declaración de variables
+	global cnt #Contador global
+	cnt+=1
+	if n==0 or n==1: #Condición inicial para determinar los dos primeros elementos de la sucesión
+		return(1) #Valor de los dos primeros elemntos
+	else:
+		return fibonacci(n-2)+fibonacci(n-1) #Suma de los valores de los elementos anteriores al elemento buscado
